@@ -1,0 +1,24 @@
+//with closures - Creating Private Variables
+const createCounter = function(){
+    let counter =0 ;
+    
+    return{
+        increment: function(){
+            counter++;
+            return counter;
+        },
+        decrement: function(){
+            counter--;
+            return counter;
+        },
+        getvalue: function(){
+            return counter;
+        }
+    };
+};
+
+const myCounter = createCounter();
+console.log(myCounter.increment()); //1
+console.log(myCounter.decrement()); //2
+console.log(myCounter.decrement());//1
+console.log(myCounter.getvalue());//1
