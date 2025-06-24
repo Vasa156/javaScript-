@@ -1,0 +1,29 @@
+const createBankAccount = function(initialBalance){
+    let balance = initialBalance;
+    
+    return{
+        deposit: function(amount){
+            balance = balance + amount; // added deposite amount and balance
+        },
+            withdraw: function(amount){
+                //here we are checking that balance doesn't go below 0 so i used if condition inside subtracted. 
+                if(amount <= balance){
+                    balance = balance - amount;
+                }else {
+                    console.log("In-Suffcient Fund: "+ balance);
+                }
+            },
+        checkBalance: function(){
+                return balance; //here returns the original amount 
+            }
+    };
+};
+// Testing Values
+const myAccount = createBankAccount(1000);
+console.log(myAccount.checkBalance()); //1000
+myAccount.deposit(500);
+console.log(myAccount.checkBalance()); //1500
+myAccount.withdraw(300);
+console.log(myAccount.checkBalance()); //1200
+myAccount.withdraw(2000);
+console.log(myAccount.checkBalance()); //In-Sufficient Fund: 1200
