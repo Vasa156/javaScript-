@@ -1,0 +1,28 @@
+console.log("\n=== TASK 2: Object.create() Pattern ===");
+// Create a 'vehicle' prototype object with:
+// - init method to set make, model, year
+// - start method that returns "Starting [make] [model]"
+// - getAge method that returns current year minus vehicle year
+// Create a car using Object.create and test all methods
+
+// YOUR CODE HERE:
+const vehiclePrototype_Fixed ={
+    init: function(make,model,year){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        return this;
+    },
+    start : function(){
+        return `Starting ${this.make} ${this.model}`;
+    },
+    getAge : function(){
+        currentYear = new Date().getFullYear();
+        return currentYear-this.year;
+        
+    }
+};
+const myCar = Object.create(vehiclePrototype_Fixed).init("Toyota", "Camry", 2023);
+console.log("start: ", myCar.start());
+console.log("Age: ", myCar.getAge());
+console.log("Make: ", myCar.make);
