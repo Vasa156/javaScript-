@@ -1,0 +1,32 @@
+console.log("===PROTOTYPE INHERITANCE===");
+
+//parent constructor
+function Animal(name){
+    this.name = name;
+}
+Animal.prototype.speak = function(){
+    return `${this.name} making a sound!`;
+}
+Animal.prototype.move = function(){
+    return `${this.name} moves`;
+}
+
+//child constructor
+function Dog(name,breedcolor){
+    Animal.call (this,name);
+    this.breedcolor = breedcolor;
+}
+//setup onheritance
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+
+Dog.prototype.speak = function(){
+    return `${this.name} making sound!`;
+}
+Dog.prototype.wagtail = function(){
+    return `${this.name} wagtail`;
+}
+const miya = new Dog("miya", "golden");
+console.log(miya.speak()); //miya making sound!
+console.log(miya.move()); //miya moves
+console.log(miya.wagtail()); //miya wagtail
