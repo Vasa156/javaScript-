@@ -1,0 +1,28 @@
+console.log("===PROTOTYPE BASIC===");
+//function declaration and this for constructor function
+function person(name,age){
+    this.name = name;
+    this.age = age;
+}
+person.prototype.greet = function(){
+    return `Hi, I am ${this.name} and I am ${this.age} years old!`;
+};
+person.prototype.isadult = function(){
+    return this.age >= 18;
+};
+const vasu = new person("vasu", 25);
+const anu = new person("anu", 17);
+console.log(vasu.greet());
+console.log(anu.isadult());
+
+console.log("\n===PROTOTYPE CHAIN===");
+vasu.hobby = "reading"; /// adding directyly
+console.log(vasu.hobby);
+console.log(anu.greet());
+//check where properties come from
+console.log(vasu.hasOwnProperty('name')); //true (own property)
+console.log(vasu.hasOwnProperty('greet')); //false(inherited)
+
+
+
+
