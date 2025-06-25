@@ -1,0 +1,19 @@
+console.log("=== TASK 1: Basic Constructor Function ===");
+// Create a Book constructor function with properties: title, author, pages
+function Book(title,author,pages){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+}
+// Add a method 'getSummary()' to the prototype that returns: "Title by Author (X pages)"
+Book.prototype.getSummary = function(){
+    return `${this.title} by ${this.author} ${this.pages}`;
+}
+// Create two book instances and test the method
+ const book1 = new Book("1984", "George Orwell", 328);
+ const book2 = new Book("To Kill a Mockingbird", "Harper Lee", 376);
+
+console.log(book1.getSummary()); //1984 by George Orwell 328
+console.log(book2.getSummary()); To Kill a Mockingbird by Harper Lee 376
+
+
