@@ -1,0 +1,21 @@
+console.log ("=== OBJECT.CREATE()===");
+// Create a prototype object
+const personPrototype = {
+    init: function(name,age){
+        this.name = name;
+        this.age = age;
+        return this;
+    },
+    greet : function(){
+        return `Hi, Good Moring. I'm ${this.name}`;
+    },
+    isAdult : function(){
+        return this.age >= 18;
+    }
+};
+// Create objects using Object.create()
+const mathi = Object.create(personPrototype).init("mathi",25);
+const pavan = Object.create(personPrototype).init("pavan",12);
+
+console.log(mathi.greet()); //Hi, Good Moring. I'm mathi
+console.log(pavan.isAdult()); //false
