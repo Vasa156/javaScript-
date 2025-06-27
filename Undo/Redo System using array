@@ -1,0 +1,9 @@
+let actions = [];
+actions.push('Say Hello');
+actions.push('Say Loudly');
+actions.push('Ask diifferent Question');
+console.log('Actions:', actions); //Actions: [ 'Say Hello', 'Say Loudly', 'Ask diifferent Question' ]
+let undoAction = actions.pop();
+console.log('Undoing Actions: ',undoAction); //Undoing Actions:  Ask diifferent Question
+actions.push('Wait for Answer');
+console.log('Final Action:', actions); //Ffinal Action: [ 'Say Hello', 'Say Loudly', 'Wait for Answer' ]
