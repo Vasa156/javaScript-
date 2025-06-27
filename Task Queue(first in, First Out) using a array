@@ -1,0 +1,10 @@
+//Task Queue (First In, First Out)
+
+let taskQueue = [];
+taskQueue.unshift('Urgent: Fix Server Crash');
+taskQueue.push('Send Email');
+taskQueue.push('Update documentation');
+console.log(taskQueue); //[ 'Urgent: Fix Server Crash', 'Send Email', 'Update documentation' ]
+let nextTask = taskQueue.shift();
+console.log('Processing: ',nextTask); //Processing:  Urgent: Fix Server Crash
+console.log('Remaining : ',taskQueue); //Remaining :  [ 'Send Email', 'Update documentation' ]
