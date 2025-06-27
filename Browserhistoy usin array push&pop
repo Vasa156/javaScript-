@@ -1,0 +1,10 @@
+//BrowserHistory
+
+let browserHistory = [];
+browserHistory.push('google.com');
+browserHistory.push('claude.com');
+browserHistory.push('chatgpt.com');
+browserHistory.push('github.com');
+let currentPage = browserHistory.pop();
+console.log('Going back from:', currentPage); //Going back from: github.com
+console.log(browserHistory); //[ 'google.com', 'claude.com', 'chatgpt.com' 
