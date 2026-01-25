@@ -1,0 +1,18 @@
+let arr = [3, 8, 2, 10, 5];
+
+let sum = 0;
+let max = arr[0];
+
+// Write your loop here
+
+for(let i=0;i<arr.length;i++){
+    sum+=arr[i];
+    if(arr[i]>max){
+        max=arr[i];
+    }
+}
+
+console.log("Sum:", sum);
+console.log("Max:", max);
+
+//sum : 28, max:10
