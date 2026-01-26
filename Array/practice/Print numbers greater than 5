@@ -1,0 +1,11 @@
+let arr = [1, 6, 3, 9, 4, 8];
+let n=5;
+
+// Write loop to print only numbers > 5
+for(let i=0;i<arr.length;i++){
+    if(arr[i]>n){
+        console.log(arr[i]);
+    }
+}
+
+//output 6,9,8
