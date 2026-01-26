@@ -1,0 +1,10 @@
+let str="premium";
+let arr=str.split("");
+let reversed=[];
+for(let i=arr.length;i>=0;i--){
+    reversed.push(arr[i]);
+}
+let result=reversed.join("");
+console.log(result);
+
+//output muimerp
